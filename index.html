@@ -8,25 +8,29 @@
   <link href="style.css" rel="stylesheet" type="text/css" />
 </head>
 
-<body>
-  
-  <div class = "myTitle">
- Boughen's Chat
+<body onload="ghostTyping()">
+
+  <div class="myTitle">
+    Boughen's Chat
   </div>
-  
-  <input type = "name" id = "theirWords">
-  <button id = "submit" onclick= "ghostTyping()" >Press this</button>
-  <div id= "output">
-    I will answer here
+
+  <div class="container">
+    <input type="name" id="theirWords">
+    <button id="submit" onclick="getTextInputBox()">Press this</button>
+    <div id="output">
+     
+    </div>
   </div>
+
+
   <script src="script.js"></script>
 
- <!--
+  <!--
   This script places a badge on your repl's full-browser view back to your repl's cover
   page. Try various colors for the theme: dark, light, red, orange, yellow, lime, green,
   teal, blue, blurple, magenta, pink!
   -->
-  <script src="https://replit.com/public/js/replit-badge.js" theme="blue" defer></script> 
+  <script src="https://replit.com/public/js/replit-badge.js" theme="blue" defer></script>
 </body>
 
 </html>
