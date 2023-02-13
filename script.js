@@ -35,15 +35,24 @@ function getTextInputBox(){
   //this function will be called when the user presses the btn
   //and will get the words the user types in 
   //the input box
+ 
   phrase =  theirWords.value;
   phrase = phrase.toLowerCase().replace(/[^\w\s\d]/gi,"");
-  console.log(phrase);
   i=0;
   output.innerHTML += "<br>You: " + phrase + "<br>"
   respond();
 }
 function respond(){
-  phrase = "Oh great name!"
+  phrase = compare(target, reply, phrase)
   i=0;
   ghostTyping();
 }
+function compare(thisTarget, thisReply, thisPhrase){
+  for(var x  = 0 ; x < thisTarget.length ; x++){
+    for(var y = 0; y < thisTarget[x].length ; y++){
+      if( thisTarget[x][y] == thisPhrase){
+        return(thisReply[x][y])
+      }
+    }// end y for loop
+  }//end x for loop
+}//end function
