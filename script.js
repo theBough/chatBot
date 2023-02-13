@@ -3,6 +3,27 @@ var i = 0;
 var output = document.getElementById("output")
 var theirWords = document.getElementById("theirWords")
 
+//These are words and phrases we are looking for in
+//the user's text.
+var target = [
+  ["hi","hey","hello"],
+  ["how are you","what is up"],
+  ["bad", "bored", "tired", "sad"],
+  ["tell me a story", "tell me a joke"]
+]//end array
+
+//Our reply to the users phrase, and or questions.
+var reply = [
+  ["Hello!" , "Hi again","Howdy","Hey!"],
+  [
+    "I am doing well thanks. How about you?",
+    "Pretty well, how are you?",
+    "Fantastic thanks. I can I help?"
+  ],
+  ["Well that sucks.", "Sorry to hear", "Why?"],
+  ["I'm affraid of the calendar. Its days are numbered"]
+]//
+
 function ghostTyping(){
   if( i < phrase.length){
     output.innerHTML += phrase.charAt(i);
@@ -21,7 +42,6 @@ function getTextInputBox(){
   output.innerHTML += "<br>You: " + phrase + "<br>"
   respond();
 }
-
 function respond(){
   phrase = "Oh great name!"
   i=0;
