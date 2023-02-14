@@ -11,7 +11,6 @@ var target = [
   ["bad", "bored", "tired", "sad"],
   ["tell me a story", "tell me a joke"]
 ]//end array
-
 //Our reply to the users phrase, and or questions.
 var reply = [
   ["Hello!" , "Hi again","Howdy","Hey!"],
@@ -50,7 +49,7 @@ function respond(){
 function compare(thisTarget, thisReply, thisPhrase){
   for(var x  = 0 ; x < thisTarget.length ; x++){
     for(var y = 0; y < thisTarget[x].length ; y++){
-      if( thisTarget[x][y] == thisPhrase){
+      if(thisPhrase.includes(thisTarget[x][y])){
         return(thisReply[x][y])
       }
     }// end y for loop
