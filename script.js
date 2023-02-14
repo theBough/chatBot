@@ -50,7 +50,10 @@ function compare(thisTarget, thisReply, thisPhrase){
   for(var x  = 0 ; x < thisTarget.length ; x++){
     for(var y = 0; y < thisTarget[x].length ; y++){
       if(thisPhrase.includes(thisTarget[x][y])){
-        return(thisReply[x][y])
+        var rndNum = Math.random()*thisReply[x].length
+        rndNum = Math.floor(rndNum)
+        console.log(rndNum)
+        return(thisReply[x][rndNum])
       }
     }// end y for loop
   }//end x for loop
